@@ -1,0 +1,53 @@
+.nav {
+  overflow: hidden;
+  will-change: height;
+
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .imageContainer {
+    display: block;
+    max-width: 450px;
+    max-height: 350px;
+    border-radius: 10px;
+
+    img {
+      object-fit: cover;
+    }
+  }
+
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: 12px;
+
+    ul {
+      width: 50%;
+      margin-top: 10px;
+      overflow: hidden;
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      color: #242424;
+
+      span {
+        color: #9f9689;
+      }
+    }
+
+  }
+}
+
+

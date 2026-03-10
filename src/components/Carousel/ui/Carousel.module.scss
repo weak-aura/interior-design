@@ -1,0 +1,81 @@
+.wrapper {
+  height: 450px;
+  display: flex;
+  
+  .controllers {
+    padding: 10px 10px 10px 0;
+    min-width: 250px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    
+    .borderRight {
+      position: absolute;
+      top: 0;
+      right: 0;
+      border-right: solid 1px black;
+      height: 100%;
+      transform-origin: center;
+    }
+
+    .arrows {
+      display: flex;
+      gap: 5px;
+      margin-top: 5px;
+
+      button {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+// carousel
+.emblaViewport {
+  overflow: hidden;
+  cursor: grab;
+  user-select: none;
+
+  &:active {
+    cursor: grabbing;
+  }
+
+  .emblaContainer {
+    display: flex;
+    height: 100%;
+
+    .emblaSlide {
+      flex: 0 0 calc((100%) / 3);
+      height: 100%;
+      padding-top: 10px;
+      padding-bottom: 10px;
+
+      .emblaSlideNumber {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        padding-left: 10px;
+
+        img {
+          width: 100%;
+          flex: 1;
+          min-height: 0;
+          object-fit: cover;
+          object-position: center;
+        }
+
+        p {
+          min-height: 53px;
+          max-height: 53px;
+          padding-top: 5px; 
+          flex-shrink: 0; 
+        }
+      }
+    }
+  }
+}
