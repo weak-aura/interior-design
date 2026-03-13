@@ -2,7 +2,7 @@ import styles from "./Accordion.module.scss";
 import React from "react";
 import {AnimatePresence, motion} from "framer-motion";
 import {width} from "../../../anim";
-import {workProcess} from "../../../assets/others.ts"
+import {workProcess} from "../../../assets/content.ts"
 
 export const Accordion = () => {
   const [openIndex, setOpenIndex] = React.useState<number>(0);

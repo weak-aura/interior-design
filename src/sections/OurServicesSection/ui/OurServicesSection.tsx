@@ -2,7 +2,7 @@ import {motion} from "framer-motion";
 import {scaleX} from "../../../anim";
 import {Carousel} from "../../../components/Carousel";
 import styles from "./OurServicesSection.module.scss";
-import {services} from "../../../assets/others.ts";
+import {services} from "../../../assets/content.ts";
 
 
 export const OurServicesSection = () => {

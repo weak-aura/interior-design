@@ -1,5 +1,5 @@
 import styles from './ReviewsSection.module.scss';
-import {reviews} from "../../../assets/others.ts";
+import {reviews} from "../../../assets/content.ts";
 import React from "react";
 import {AnimatePresence, motion} from "framer-motion";
 import {expand, rotate, scaleX} from "../../../anim";
@@ -53,7 +53,11 @@ export const ReviewsSection = () => {
                   >
                     <div className={styles.leftSide}>
                       <img src={item.src} alt="img"/>
-                      <p>some text</p>
+                      <div className={styles.leftSideContent}>
+                        <p>Площадь:<h4>{item.area}</h4></p>
+                        <p>Срок ремонта:<h4>7 месяцев</h4></p>
+                        <p>Тип здания:<h4>Новостройки</h4></p>
+                      </div>
                     </div>
                     <p>{item.comment}</p>
                   </motion.div>

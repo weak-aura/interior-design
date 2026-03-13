@@ -2,7 +2,7 @@ import styles from "./Nav.module.scss";
 import {NavLinks} from "../../NavLinks";
 import {motion} from "framer-motion";
 import {height, opacity} from "../../../anim";
-import {links} from "../../../assets/others.ts";
+import {links} from "../../../assets/content.ts";
 import {useAppSelector} from "../../../redux/hooks.ts";
 
 

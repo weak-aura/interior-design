@@ -48,12 +48,22 @@
     .leftSide {
       flex-basis: 50%;
       display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
 
       img {
-        max-width: 310px;
-        height: 300px;
+        width: 310px;
+        height: 200px;
         object-fit: cover;
         object-position: center;
+      }
+      
+      .leftSideContent {
+        height: 250px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-shrink: 0;
       }
     }
 

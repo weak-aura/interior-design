@@ -22,7 +22,7 @@ export const ContactSection = () => {
         </div>
 
         <div className={styles.rightSide}>
-          <img src="images/portfolio/president_park/1_View15_Post.webp" alt="img"/>
+          <img src="images/portfolio/house/preview_600-800px/01-14_preview.webp" alt="img"/>
         </div>
 
       </div>
