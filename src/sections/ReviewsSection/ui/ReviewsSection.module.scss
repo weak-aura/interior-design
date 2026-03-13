@@ -64,6 +64,14 @@
         flex-direction: column;
         justify-content: space-between;
         flex-shrink: 0;
+        
+        p {
+          display: flex;
+          flex-direction: column;
+          span {
+            font-weight: 500;
+          }
+        }
       }
     }
 

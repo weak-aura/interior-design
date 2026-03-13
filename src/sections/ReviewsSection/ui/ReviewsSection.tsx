@@ -54,9 +54,9 @@ export const ReviewsSection = () => {
                     <div className={styles.leftSide}>
                       <img src={item.src} alt="img"/>
                       <div className={styles.leftSideContent}>
-                        <p>Площадь:<h4>{item.area}</h4></p>
-                        <p>Срок ремонта:<h4>7 месяцев</h4></p>
-                        <p>Тип здания:<h4>Новостройки</h4></p>
+                        <p>Площадь:<span>{item.area}</span></p>
+                        <p>Срок ремонта:<span>7 месяцев</span></p>
+                        <p>Тип здания:<span>Новостройки</span></p>
                       </div>
                     </div>
                     <p>{item.comment}</p>
