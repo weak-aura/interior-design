@@ -23,17 +23,17 @@
       text-decoration: none;
       color: black;
     }
-    
+
     .menu {
       display: flex;
       gap: 6px;
-      
+
       .burger {
         width: 23px;
         height: 100%;
         //background-color: darkgray;
         position: relative;
-        
+
         .topLine {
           position: absolute;
           top: 20%;
@@ -44,7 +44,7 @@
           transform-origin: bottom left;
           border-radius: 2px;
         }
-        
+
         .bottomLine {
           position: absolute;
           bottom: 20%;
@@ -89,3 +89,21 @@
   z-index: 10;
 }
 
+@media (max-width: 425px) {
+
+  .header {
+    .bar {
+
+      .menu {
+        .label {
+          display: none;
+        }
+      }
+
+      .phoneNumber {
+        display: none;
+      }
+    }
+  }
+
+}

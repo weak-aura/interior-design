@@ -17,7 +17,7 @@ export const Nav = () => {
                 animate="enter"
                 exit={isMounted? "none": "exit"}
     >
-      <div className={styles.overlay}/>
+      {/*<div className={styles.overlay}/>*/}
       <div className={styles.wrapper}>
         <div className={styles.container}>
           <NavLinks links={links}/>
@@ -27,7 +27,7 @@ export const Nav = () => {
             <li>Images: <span>Freepik, Envato</span></li>
           </ul>
         </div>
-        <motion.div variants={opacity} initial="initial" animate={selectedLink.active ? "enter" : "exit"}>
+        <motion.div className={styles.selectedImage} variants={opacity} initial="initial" animate={selectedLink.active ? "enter" : "exit"}>
           <img src={links[selectedLink.index].src} alt="img" className={styles.imageContainer}/>
         </motion.div>
       </div>

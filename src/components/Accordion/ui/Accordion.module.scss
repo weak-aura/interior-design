@@ -1,10 +1,18 @@
 .wrapper {
+
+  height: 450px;
+}
+
+.accordionCol {
+  display: none;
+}
+
+.accordionRow {
   display: flex;
   overflow: hidden;
-
+  height: 100%;
   color: black;
   border: solid 1px black;
-  height: 450px;
 }
 
 .container {
@@ -18,7 +26,6 @@
     }
   }
 
-  
   &:nth-child(4) {
     .content {
       border-left: solid 1px black;
@@ -45,7 +52,7 @@
 
   .content {
     display: flex;
-    
+
     p {
       width: 100%;
       padding: 10px;
@@ -57,6 +64,44 @@
       width: 100%;
       height: auto;
       object-fit: cover;
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .accordionRow {
+    display: none;
+  }
+
+  .wrapper {
+    height: auto;
+  }
+
+  .accordionCol {
+    display: block;
+    
+    .borderTop {
+      border-top: solid 1px black;
+      width: 100%;
+      height: 100%;
+      transform-origin: center;
+    }
+
+    .label {
+      height: 100%;
+      flex-shrink: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      padding: 16px 0;
+      font-weight: 600;
+    }
+
+    .content {
+      overflow: hidden;
+      background-color: var(--bg-primary);
+      border-top: dashed 0.5px #a69e9e;
     }
   }
 }

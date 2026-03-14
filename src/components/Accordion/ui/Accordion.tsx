@@ -1,7 +1,7 @@
 import styles from "./Accordion.module.scss";
 import React from "react";
 import {AnimatePresence, motion} from "framer-motion";
-import {width} from "../../../anim";
+import {expand, rotate, scaleX, width} from "../../../anim";
 import {workProcess} from "../../../assets/content.ts"
 
 export const Accordion = () => {
@@ -9,32 +9,75 @@ export const Accordion = () => {
 
   return (
     <div className={styles.wrapper}>
-      {
-        workProcess.map((el, index) => (
-          <div key={index} className={styles.container}>
+      <div className={styles.accordionRow}>
+        {
+          workProcess.map((el, index) => (
+            <div key={index} className={styles.container}>
 
-            <div onClick={() => setOpenIndex(index)} className={styles.label}>
-             <p>{el.title}</p>
+              <div onClick={() => setOpenIndex(index)} className={styles.label}>
+                <p>{el.title}</p>
+              </div>
+
+              <AnimatePresence>
+                {openIndex === index && (
+                  <motion.div className={styles.content}
+                              variants={width}
+                              initial="initial"
+                              animate="enter"
+                              exit="exit"
+                  >
+                    <p>{el.description}</p>
+                    <img src={el.src} alt="img"/>
+
+                  </motion.div>
+                )}
+              </AnimatePresence>
+
             </div>
+          ))
+        }
+      </div>
 
-            <AnimatePresence>
-              {openIndex === index && (
-                <motion.div className={styles.content}
-                            variants={width}
-                            initial="initial"
-                            animate="enter"
-                            exit="exit"
-                >
-                  <p>{el.description}</p>
-                  <img src={el.src} alt="img"/>
+      <div className={styles.accordionCol}>
+        {
+          workProcess.map((el, index) => (
+            <div key={index}>
+              <motion.div className={styles.borderTop}
+                          variants={scaleX}
+                          initial={"initial"}
+                          whileInView={"enter"}
+                          viewport={{once: true, amount: 0.8}}
+                          exit={"exit"}
+              />
+              <div className={styles.label}
+                   onClick={() => setOpenIndex(index)}
+              >
+                <h4>{el.title}</h4>
+                <motion.span variants={rotate}
+                             initial={"initial"}
+                             animate={openIndex === index ? "enter" : "exit"}
+                >➕
+                </motion.span>
+              </div>
+              <AnimatePresence>
+                {openIndex === index && (
+                  <motion.div className={styles.content}
+                              variants={expand}
+                              initial={"initial"}
+                              animate={"enter"}
+                              exit={"exit"}
+                  >
+                    <p>{el.description}</p>
+                  </motion.div>
+                )
+                }
+              </AnimatePresence>
 
-                </motion.div>
-              )}
-            </AnimatePresence>
+            </div>
+          ))
+        }
+      </div>
 
-          </div>
-        ))
-      }
     </div>
   );
 };

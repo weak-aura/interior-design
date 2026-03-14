@@ -1,7 +1,7 @@
 .wrapper {
   height: 450px;
   display: flex;
-  
+
   .controllers {
     padding: 10px 10px 10px 0;
     min-width: 250px;
@@ -10,7 +10,7 @@
     flex-direction: column;
     justify-content: space-between;
     position: relative;
-    
+
     .borderRight {
       position: absolute;
       top: 0;
@@ -52,14 +52,13 @@
     .emblaSlide {
       flex: 0 0 calc((100%) / 3);
       height: 100%;
-      padding-top: 10px;
-      padding-bottom: 10px;
+      min-width: 0;
+      padding: 10px 5px;
 
       .emblaSlideNumber {
         display: flex;
         flex-direction: column;
         height: 100%;
-        padding-left: 10px;
 
         img {
           width: 100%;
@@ -72,8 +71,42 @@
         p {
           min-height: 53px;
           max-height: 53px;
-          padding-top: 5px; 
-          flex-shrink: 0; 
+          padding-top: 5px;
+          flex-shrink: 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .wrapper {
+    flex-direction: column;
+    height: 100%;
+
+    .controllers {
+      order: 1;
+      flex-direction: row;
+
+      .borderRight {
+        display: none;
+      }
+    }
+
+    .emblaViewport {
+      height: 430px;
+    }
+
+    .emblaContainer {
+      
+      .emblaSlide {
+        flex: 0 0 calc((100%) / 1);
+        
+        .emblaSlideNumber {
+          
+          p {
+            min-height: 43px;
+          }
         }
       }
     }

@@ -50,4 +50,28 @@
   }
 }
 
+@media (max-width: 425px) {
+  .nav {
 
+    .wrapper {
+      gap: 0px;
+      height: 100%;
+
+      .container {
+        height: 100%;
+
+        .footer {
+          height: 100%;
+          flex-direction: column;
+          justify-content: end;
+        }
+      }
+
+      .selectedImage {
+        display: none;
+      }
+    }
+
+  }
+
+}

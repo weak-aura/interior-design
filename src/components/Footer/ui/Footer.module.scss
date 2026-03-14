@@ -54,3 +54,31 @@
     }
   }
 }
+
+@media (max-width: 425px) {
+  .footer {
+    height: auto;
+  }
+  
+  .wrapper {
+    .col {
+      flex-direction: column;
+      
+      span {
+        display: flex;
+        justify-content: center;
+      }
+
+      .nav {
+          margin-top: 20px;
+          margin-bottom: 20px;
+        li {
+          min-width: 0;
+          flex-basis: 50%;
+          flex-shrink: 0;
+          flex-grow: 0;
+        }
+      }
+    }
+  }
+}

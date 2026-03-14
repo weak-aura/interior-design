@@ -8,7 +8,7 @@ import {scaleY} from "../../../anim";
 
 export const Carousel = ({data}: CarouselProps) => {
   const {name, propertyName, isLink, images} = data;
-  const [emblaRef, emblaApi] = useEmblaCarousel({loop: true, dragFree: true});
+  const [emblaRef, emblaApi] = useEmblaCarousel({loop: true, dragFree: false});
   const [itemIndex, setItemIndex] = React.useState(1);
 
   const updateIndex = React.useCallback(() => {
@@ -44,7 +44,7 @@ export const Carousel = ({data}: CarouselProps) => {
 
   return (
     <div className={styles.wrapper}>
-      
+
       <div className={styles.controllers}>
         <motion.div className={styles.borderRight}
                     variants={scaleY}

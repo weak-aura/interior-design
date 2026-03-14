@@ -3,6 +3,7 @@
   padding-bottom: 50px;
 
   h1 {
+    font-size: clamp(27px, 4vw, 52px);
     margin-bottom: 20px;
   }
 }

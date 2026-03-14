@@ -62,7 +62,7 @@ export const Header = () => {
                 </div>
               </div>
             </div>
-            <a href="https://wa.me/77472999242">+7 747 299-9242</a>
+            <a className={styles.phoneNumber} href="https://wa.me/77472999242">+7 747 299-9242</a>
           </div>
           <AnimatePresence mode="wait">
             {isOpen && <Nav/>}

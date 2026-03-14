@@ -1,7 +1,7 @@
 .section {
   padding-top: 50px;
   padding-bottom: 50px;
-  
+
   h1 {
     margin-bottom: 20px;
   }
@@ -9,7 +9,7 @@
 
 .frame {
   position: relative;
-  
+
   .borderTop {
     position: absolute;
     top: 0;
@@ -19,7 +19,7 @@
     border-top: solid 1px black;
     transform-origin: center;
   }
-  
+
   .trigger {
     display: flex;
     align-items: center;
@@ -27,12 +27,19 @@
     cursor: pointer;
     width: 100%;
     padding: 6px;
+    
+    .label {
+      
+      span {
+        display: none;
+      }
+    }
 
     .triggerEnd {
       display: flex;
       justify-content: space-between;
       flex-basis: 50%;
-      
+
       h4 {
         display: flex;
         gap: 10px;
@@ -57,17 +64,18 @@
         object-fit: cover;
         object-position: center;
       }
-      
+
       .leftSideContent {
         height: 250px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         flex-shrink: 0;
-        
+
         p {
           display: flex;
           flex-direction: column;
+
           span {
             font-weight: 500;
           }
@@ -86,6 +94,16 @@
 
   }
 }
+
+.desktopView {
+  display: block; 
+  
+  @media (max-width: 425px) {
+    display: none; 
+  }
+}
+
+
 
 
 

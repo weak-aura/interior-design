@@ -1,15 +1,19 @@
 .wrapper {
   padding-top: 50px;
   padding-bottom: 50px;
+  
+  h1 {
+    font-size: clamp(27px, 4vw, 52px);
+  }
 
   .frame {
     display: flex;
     justify-content: space-between;
     padding-top: 20px;
     padding-bottom: 20px;
-
+    
     p {
-      min-width: 300px;
+      flex-basis: 50%;
     }
   }
 }
@@ -47,6 +51,31 @@
     .border {
       border-bottom: solid 1px black;
       transform-origin: center;
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  
+  .frame {
+    flex-direction: column;
+  }
+  
+  .cards {
+    
+    .card {
+      flex-basis: 100%;
+      padding: 0;
+      .inner {
+        display: flex;
+        gap: 10px;
+        flex-direction: row;
+        align-items: center;
+        
+        .caption {
+          margin: 0;
+        }
+      }
     }
   }
 }
