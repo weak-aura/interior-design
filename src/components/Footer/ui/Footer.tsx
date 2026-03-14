@@ -18,7 +18,7 @@ export const Footer = () => {
           </ul>
 
           <div className={styles.adress}>
-            <p>Алматы, мкр Шугыла</p>
+            <p>Казахстан, Алматы</p>
             <p>Почта для связи: bekzatweb@gmail.com</p>
             <p>Резюме: <a href="https://hh.kz/resume/fef411acff0fbcc47d0039ed1f535239413161">HeadHunter</a></p>
           </div>
